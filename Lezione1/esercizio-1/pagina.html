@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it_IT">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- === Includo file CSS == -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+
+    <title></title>
+
+</head>
+<body>
+    <h1>Best Application in the World</h1>
+    <fieldset>
+    	<legend>Somma due numeri</legend>
+    	Inserisci il primo numero:
+    	<input type="text" name="fldNumero1" id="fldNumero1">
+    	<br/>
+
+    	Inserisci il secondo numero:
+    	<input type="text" name="fldNumero2" id="fldNumero2">
+		<br/>
+		<button id="btnSommaNumeri">Effettua il calcolo</button>
+    </fieldset>
+
+    <fieldset>
+    	<legend>Somma Lista Numeri</legend>
+    	<input type="text" name="fldListaNumeri" id="fldListaNumeri"
+    			size="80"
+    			placeholder="Inserisci elenco numeri separati da virgola">
+    	<button id="btnSommaListaNumeri">Effettua la somma</button>		
+    </fieldset>
+
+    <!-- === Includo libreria === -->
+    <script src="js/library.js"></script>
+
+    <!-- === Includo BehaviorLayer / Application Logic === -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
