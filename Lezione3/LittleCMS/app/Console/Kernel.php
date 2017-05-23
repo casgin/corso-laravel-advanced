@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\PrimoComando::class,
+        Commands\FeedImporter::class,
     ];
 
     /**
