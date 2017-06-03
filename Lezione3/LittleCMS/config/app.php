@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         willvincent\Feeds\FeedsServiceProvider::class,
+        Reliese\Coders\CodersServiceProvider::class,
 
     ],
 
