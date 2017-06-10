@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+
+
 class FeedImporter extends Command
 {
     /**
@@ -75,7 +77,8 @@ class FeedImporter extends Command
         $arItems = [];
         $arOutputTable = [];
 
-        $mdlImportedFeed = new \App\ImportedFeed();
+        // $mdlImportedFeed = new \App\ImportedFeed();
+        $mdlImportedFeed = new \App\Models\ImportedFeed();
 
         foreach ($arFeed as $item)
         {
