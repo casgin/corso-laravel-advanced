@@ -1,0 +1,92 @@
+<!-- === s:Button trigger modal === -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#frmInserisciNuovo">
+  Inserisci Nuovo
+</button>
+<!-- === e:Button trigger modal === -->
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>RagioneSociale</th>
+      <th>Citt&agrave;</th>
+      <th>Indirizzo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="item in elenco">
+      <td>{{item.id}}</td>
+      <td>{{item.ragione_sociale}}</td>
+      <td>{{item.citta}}</td>
+      <td>{{item.indirizzo}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- === s:Modal Form frmInserisciNuovo ===  -->
+<div class="modal fade" id="frmInserisciNuovo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Inserisci Nuovo Anagrafica</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="form-group">
+            <label for="fldRagioneSociale">Ragione Sociale</label>
+            <input type="text" class="form-control" id="fldRagioneSociale" placeholder="Ragione Sociale" ng-model="fldRagioneSociale">
+          </div>
+
+          <div class="form-group">
+            <label for="fldIndirizzo">Indirizzo</label>
+            <input type="text" class="form-control" id="fldIndirizzo" placeholder="Indirizzo" ng-model="fldIndirizzo">
+          </div>
+
+          <div class="form-group">
+            <label for="fldCitta">Citt&agrave;</label>
+            <input type="text" class="form-control" id="fldCitta" placeholder="Citta" ng-model="fldCitta">
+          </div>
+
+          <div class="form-group">
+            <label for="fldCap">CAP</label>
+            <input type="text" class="form-control" id="fldCap" placeholder="CAP" ng-model="fldCap">
+          </div>
+
+          <div class="form-group">
+            <label for="fldProvincia">Provincia</label>
+            <input type="text" class="form-control" id="fldProvincia" placeholder="Provincia" ng-model="fldProvincia">
+          </div>
+
+          <div class="form-group">
+            <label for="fldWebsite">Website</label>
+            <input type="text" class="form-control" id="fldWebsite" placeholder="Indirizzo sito web" ng-model="fldWebsite">
+          </div>
+
+          <div class="form-group">
+            <label for="fldTipoContatto">Tipo Contatto</label>
+            <select id="fldTipoContatto" class="form-control" ng-model="fldTipoContatto">
+              <option value="cliente" selected>Cliente</option>
+              <option value="fornitore">Fornitore</option>
+            </select>
+          </div>
+
+        </form>
+
+      </div>
+
+
+      <div class="modal-footer">
+        {{sendMessage}}
+        <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+        <button type="submit" class="btn btn-primary" ng-click="inviaDati()" ng-show="hideSubmit == false">Invia dati</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- === e:Modal Form frmInserisciNuovo ===  -->

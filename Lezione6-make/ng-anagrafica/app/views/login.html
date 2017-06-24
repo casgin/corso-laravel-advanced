@@ -1,0 +1,23 @@
+<form>
+  <div class="form-group">
+    <label for="fldEmail">Email address</label>
+    <input type="email" class="form-control" id="fldEmail" placeholder="Email" ng-model="fldEmail">
+  </div>
+  <div class="form-group">
+    <label for="fldPasswd">Password</label>
+    <input type="password" class="form-control" id="fldPasswd" placeholder="Password" ng-model="fldPasswd">
+  </div>
+
+  <button type="submit" class="btn btn-primary" ng-click="doLogin()" ng-show="hideSubmit == false">Login</button>
+  {{loginMessage}}
+</form>
+
+
+<div class="row" ng-show="userLogged">
+  <div class="col-md-12">
+    <p class="bg-success">
+      Login Effettuato, vai su <a ng-href="#/anagrafica">Anagrafica</a>
+    </p>
+  </div>
+</div>
+
