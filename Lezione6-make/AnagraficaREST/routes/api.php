@@ -13,14 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-
+// --- Risorse libere
 Route::post('auth/register', 'UserController@register');
 Route::post('auth/login', 'UserController@login');
 
-// --- Risorsa protetta dal middleware JWT Auth
+// --- Risorse protetta dal middleware JWT Auth
 Route::group(['middleware' => 'jwt.auth'], function () {
 
     Route::get('user-info', 'UserController@getAuthUser');
     Route::get('angular-demo', 'UserController@angularDemo');
+
+    // --- Aggiunto il route API per la CRUD verso anagrafica
+    Route::resource('anagrafica', 'RsAnagraficaController');
 
 });
